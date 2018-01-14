@@ -6,28 +6,579 @@
     android:background="@drawable/local"
     >
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Xbox 1 -->
 
     <TextView
+        android:id="@+id/xbox1disponible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="17dp"
-        android:textSize="10sp"
-        android:id="@+id/textView"
-        android:text="Disponible"
+        android:layout_alignBottom="@+id/detallesXbox1"
+        android:layout_alignLeft="@+id/detallesXbox1"
+        android:layout_alignStart="@+id/detallesXbox1"
+        android:layout_marginBottom="33dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
         android:background="#FFF"
-        />
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox1tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFF"
+        android:text="Xbox 1"
+        android:textSize="10sp" />
 
     <Button
         android:layout_width="75dp"
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="2dp"
         android:text="Detalles"
         android:textSize="5sp"
+        android:id="@+id/detallesXbox1" />
 
 
-        />
+<!--Xbox 2-->
+
+    <TextView
+        android:id="@+id/xbox2disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox1disponible"
+        android:layout_alignStart="@+id/xbox1disponible"
+        android:layout_below="@+id/xbox2tag"
+        android:layout_marginTop="15dp"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox2tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox1tag"
+        android:layout_alignStart="@+id/xbox1tag"
+        android:layout_below="@+id/xbox1disponible"
+        android:layout_marginTop="30dp"
+        android:background="#FFF"
+        android:text="Xbox 2"
+        android:textSize="10sp" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="160dp"
+        android:layout_alignLeft="@id/detallesXbox1"
+        android:text="Detalles"
+        android:textSize="5sp"
+        android:id="@+id/detallesXbox2" />
+
+
+
+    <!--Xbox 3-->
+
+    <TextView
+        android:id="@+id/xbox3disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox2disponible"
+        android:layout_below="@+id/xbox2tag"
+        android:layout_marginTop="120dp"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox3tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox1tag"
+        android:layout_below="@+id/xbox1disponible"
+        android:layout_marginTop="140dp"
+        android:background="#FFF"
+        android:text="Xbox 3"
+        android:textSize="10sp" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="260dp"
+        android:layout_alignLeft="@id/detallesXbox2"
+        android:layout_below="@+id/xbox2disponible"
+        android:text="Detalles"
+        android:textSize="5sp"
+        android:id="@+id/detallesXbox3" />
+
+
+    <!--Xbox 4-->
+
+    <TextView
+        android:id="@+id/xbox4disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox1disponible"
+        android:layout_below="@+id/xbox3tag"
+        android:layout_marginTop="110dp"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox4tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox1tag"
+        android:layout_below="@+id/xbox3disponible"
+        android:layout_marginTop="65dp"
+        android:background="#FFF"
+        android:text="Xbox 4"
+        android:textSize="10sp" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="370dp"
+        android:layout_alignLeft="@id/detallesXbox1"
+        android:layout_below="@id/detallesXbox3"
+        android:text="Detalles"
+        android:textSize="5sp"
+        android:id="@+id/detallesXbox4" />
+
+
+
+    <!--Xbox 5-->
+
+    <TextView
+        android:id="@+id/xbox5disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox1disponible"
+        android:layout_below="@+id/xbox3tag"
+        android:layout_marginTop="230dp"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox5tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox1tag"
+        android:layout_below="@+id/xbox3disponible"
+        android:layout_marginTop="190dp"
+        android:background="#FFF"
+        android:text="Xbox 5"
+        android:textSize="10sp" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="480dp"
+        android:layout_alignLeft="@id/detallesXbox1"
+        android:layout_below="@id/detallesXbox3"
+        android:text="Detalles"
+        android:textSize="5sp"
+        android:id="@+id/detallesXbox5" />
+
+    <!--Xbox 6-->
+    <TextView
+        android:id="@+id/xbox6disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox1disponible"
+        android:layout_alignBottom="@+id/xbox1disponible"
+        android:layout_alignLeft="@+id/detallesXbox6"
+        android:layout_alignStart="@+id/detallesXbox6"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox6tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox1tag"
+        android:layout_alignBottom="@+id/xbox1tag"
+        android:layout_alignEnd="@+id/xbox6disponible"
+        android:layout_alignRight="@+id/xbox6disponible"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#FFF"
+        android:text="Xbox 6"
+        android:textSize="10sp" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="95dp"
+        android:text="Detalles"
+        android:textSize="5sp"
+        android:id="@+id/detallesXbox6" />
+
+
+    <!--Xbox 7-->
+
+    <TextView
+        android:id="@+id/xbox7disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox4disponible"
+        android:layout_alignBottom="@+id/xbox4disponible"
+        android:layout_alignLeft="@+id/xbox6disponible"
+        android:layout_alignStart="@+id/xbox6disponible"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox7tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox4tag"
+        android:layout_alignBottom="@+id/xbox4tag"
+        android:layout_alignLeft="@+id/xbox6tag"
+        android:layout_alignStart="@+id/xbox6tag"
+        android:background="#FFF"
+        android:text="Xbox 7"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/detallesXbox7"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/detallesXbox4"
+        android:layout_alignBottom="@+id/detallesXbox4"
+        android:layout_alignLeft="@+id/detallesXbox6"
+        android:layout_alignStart="@+id/detallesXbox6"
+        android:text="Detalles"
+        android:textSize="5sp" />
+
+
+    <!--Xbox 8-->
+    <TextView
+        android:id="@+id/xbox8disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox6disponible"
+        android:layout_alignBottom="@+id/xbox6disponible"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_toEndOf="@+id/detallesXbox6"
+        android:layout_toRightOf="@+id/detallesXbox6"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox8tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox6tag"
+        android:layout_alignBottom="@+id/xbox6tag"
+        android:layout_alignLeft="@+id/xbox8disponible"
+        android:layout_alignStart="@+id/xbox8disponible"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:background="#FFF"
+        android:text="Xbox 8"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/detallesXbox8"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/xbox8disponible"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/detallesXbox6"
+        android:layout_toRightOf="@+id/detallesXbox6"
+        android:text="Detalles"
+        android:textSize="5sp" />
+
+
+    <!--Xbox 9-->
+
+    <TextView
+        android:id="@+id/xbox9disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox8disponible"
+        android:layout_alignStart="@+id/xbox8disponible"
+        android:layout_below="@+id/xbox3tag"
+        android:layout_marginTop="10dp"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox9tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/xbox5disponible"
+        android:layout_alignLeft="@+id/xbox8tag"
+        android:layout_alignStart="@+id/xbox8tag"
+        android:background="#FFF"
+        android:text="Xbox 9"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/detallesXbox9"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/detallesXbox8"
+        android:layout_alignStart="@+id/detallesXbox8"
+        android:layout_below="@+id/xbox3disponible"
+        android:text="Detalles"
+        android:textSize="5sp" />
+
+
+    <!--Xbox 10-->
+
+    <TextView
+        android:id="@+id/xbox10disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox7disponible"
+        android:layout_alignBottom="@+id/xbox7disponible"
+        android:layout_alignLeft="@+id/xbox9disponible"
+        android:layout_alignStart="@+id/xbox9disponible"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox10tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox7tag"
+        android:layout_alignBottom="@+id/xbox7tag"
+        android:layout_alignLeft="@+id/xbox9tag"
+        android:layout_alignStart="@+id/xbox9tag"
+        android:background="#FFF"
+        android:text="Xbox 10"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/detallesXbox10"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+
+        android:layout_alignBottom="@+id/detallesXbox7"
+        android:layout_alignLeft="@+id/detallesXbox9"
+        android:layout_alignStart="@+id/detallesXbox9"
+        android:text="Detalles"
+        android:textSize="5sp" />
+
+
+
+
+    <!-- Xbox 11 -->
+
+    <TextView
+        android:id="@+id/xbox11disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox8disponible"
+        android:layout_alignBottom="@+id/xbox8disponible"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox11tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox8tag"
+        android:layout_alignBottom="@+id/xbox8tag"
+        android:layout_alignEnd="@+id/xbox11disponible"
+        android:layout_alignRight="@+id/xbox11disponible"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#FFF"
+        android:text="Xbox 11"
+        android:textSize="10sp" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="282dp"
+        android:text="Detalles"
+        android:textSize="5sp"
+        android:id="@+id/detallesXbox11" />
+
+
+
+    <!--Xbox 12-->
+
+    <TextView
+        android:id="@+id/xbox12disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox2disponible"
+        android:layout_alignBottom="@+id/xbox2disponible"
+        android:layout_alignLeft="@+id/xbox11disponible"
+        android:layout_alignStart="@+id/xbox11disponible"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox12tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xbox1tag"
+        android:layout_alignStart="@+id/xbox1tag"
+        android:layout_below="@+id/xbox1disponible"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="275dp"
+        android:background="#FFF"
+        android:text="Xbox 12"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/detallesXbox12"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/detallesXbox2"
+        android:layout_alignBottom="@+id/detallesXbox2"
+        android:layout_alignLeft="@+id/detallesXbox11"
+        android:layout_alignStart="@+id/detallesXbox11"
+        android:text="Detalles"
+        android:textSize="5sp" />
+
+
+
+    <!--Xbox 13-->
+
+    <TextView
+        android:id="@+id/xbox13disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox9disponible"
+        android:layout_alignBottom="@+id/xbox9disponible"
+        android:layout_alignLeft="@+id/xbox12disponible"
+        android:layout_alignStart="@+id/xbox12disponible"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox13tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox9tag"
+        android:layout_alignBottom="@+id/xbox9tag"
+        android:layout_alignEnd="@+id/xbox12tag"
+        android:layout_alignRight="@+id/xbox12tag"
+        android:background="#FFF"
+        android:text="Xbox 13"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/detallesXbox13"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/detallesXbox3"
+        android:layout_alignBottom="@+id/detallesXbox3"
+        android:layout_alignLeft="@+id/detallesXbox12"
+        android:layout_alignStart="@+id/detallesXbox12"
+        android:text="Detalles"
+        android:textSize="5sp" />
+
+
+    <!--Xbox 14-->
+
+    <TextView
+        android:id="@+id/xbox14disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox10disponible"
+        android:layout_alignBottom="@+id/xbox10disponible"
+        android:layout_alignLeft="@+id/xbox13disponible"
+        android:layout_alignStart="@+id/xbox13disponible"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox14tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox10tag"
+        android:layout_alignBottom="@+id/xbox10tag"
+        android:layout_alignEnd="@+id/xbox13tag"
+        android:layout_alignRight="@+id/xbox13tag"
+        android:background="#FFF"
+        android:text="Xbox 14"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/detallesXbox14"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/detallesXbox4"
+        android:layout_alignBottom="@+id/detallesXbox4"
+        android:layout_alignLeft="@+id/detallesXbox13"
+        android:layout_alignStart="@+id/detallesXbox13"
+        android:text="Detalles"
+        android:textSize="5sp" />
+
+
+
+    <!--Xbox 15-->
+
+    <TextView
+        android:id="@+id/xbox15disponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox5disponible"
+        android:layout_alignBottom="@+id/xbox5disponible"
+        android:layout_alignLeft="@+id/xbox14disponible"
+        android:layout_alignStart="@+id/xbox14disponible"
+        android:background="#FFF"
+        android:text="Disponible"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/xbox15tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xbox5tag"
+        android:layout_alignBottom="@+id/xbox5tag"
+        android:layout_alignLeft="@+id/xbox14tag"
+        android:layout_alignStart="@+id/xbox14tag"
+        android:background="#FFF"
+        android:text="Xbox 15"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/detallesXbox15"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/detallesXbox5"
+        android:layout_alignBottom="@+id/detallesXbox5"
+        android:layout_alignLeft="@+id/detallesXbox14"
+        android:layout_alignStart="@+id/detallesXbox14"
+        android:text="Detalles"
+        android:textSize="5sp" />
+
 </RelativeLayout>
