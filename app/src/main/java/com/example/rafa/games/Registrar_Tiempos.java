@@ -1,12 +1,15 @@
 package com.example.rafa.games;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -14,7 +17,12 @@ import android.view.ViewGroup;
  * Use the {@link Registrar_Tiempos#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Registrar_Tiempos extends Fragment {
+public class Registrar_Tiempos extends Fragment implements View.OnClickListener{
+    Button detalles_xbox1,detalles_xbox2,detalles_xbox3,detalles_xbox4,
+    detalles_xbox5,detalles_xbox16,detalles_xbox7,detalles_xbox8,detalles_xbox9,
+    detalles_xbox10,detalles_xbox111,detalles_xbox12,detalles_xbox13,detalles_xbox14,detalles_xbox15;
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -64,4 +72,21 @@ public class Registrar_Tiempos extends Fragment {
         return inflater.inflate(R.layout.fragment_tiempos, container, false);
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        detalles_xbox1=(Button)view.findViewById(R.id.detallesXbox1);
+        detalles_xbox1.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        int id=view.getId();
+        Intent detalles=new Intent(this.getContext(),Detalles_Xbox.class);
+        switch (id)
+        {
+
+            case R.id.detallesXbox1: startActivity(detalles);  break;
+        }
+    }
 }
