@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rafa.games.Detalles_Xbox">
+    tools:context="com.example.rafa.games.Detalles_Xbox"
+    android:background="@color/verdeClaro"
+    android:alpha=".9">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -29,7 +31,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
         android:text="Disponible"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:background="@color/verdePrincipal"
+        android:layout_centerInParent="true"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -41,7 +46,8 @@
         android:layout_marginLeft="7dp"
         android:layout_marginStart="7dp"
         android:layout_marginTop="17dp"
-        android:text="Tiempo rentado" />
+        android:text="Tiempo rentado"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -51,7 +57,8 @@
         android:layout_alignStart="@+id/textView3"
         android:layout_below="@+id/textView3"
         android:layout_marginTop="10dp"
-        android:text="Inicio" />
+        android:text="Inicio"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -61,7 +68,8 @@
         android:layout_alignStart="@+id/textView4"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="11dp"
-        android:text="Fin" />
+        android:text="Fin"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/button"
@@ -74,7 +82,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:text="Apartar" />
+        android:text="Apartar"
+        android:background="@color/naranjaPrincipal"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -84,7 +93,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="21dp"
         android:textSize="20sp"
-        android:text="Información" />
+        android:text="Información"
+        android:textColor="@color/black"
+        android:background="@color/verdePrincipal"
+        android:layout_centerInParent="true"/>
 
     <Button
         android:id="@+id/button2"
@@ -96,7 +108,9 @@
         android:layout_marginLeft="7dp"
         android:layout_marginStart="7dp"
         android:layout_marginTop="24dp"
-        android:text="Juegos disponibles" />
+        android:text="Juegos disponibles"
+        android:background="@color/naranjaPrincipal"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/button3"
@@ -106,7 +120,8 @@
         android:layout_alignBottom="@+id/button2"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button"
-        android:text="Pantalla" />
+        android:text="Pantalla"
+        android:background="@color/naranjaPrincipal"/>
 
     <TextView
         android:id="@+id/textView8"
@@ -114,10 +129,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button2"
         android:layout_marginTop="45dp"
-        android:layout_toEndOf="@+id/textView3"
-        android:layout_toRightOf="@+id/textView3"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_toStartOf="@+id/button3"
+        android:background="@color/verdePrincipal"
         android:text="Calcula el precio"
-        android:textSize="20sp" />
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"/>
 
     <TextView
         android:id="@+id/textView9"
@@ -127,7 +145,8 @@
         android:layout_alignStart="@+id/textView5"
         android:layout_below="@+id/textView8"
         android:layout_marginTop="43dp"
-        android:text="Tiempo" />
+        android:text="Tiempo"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/editText"
@@ -159,7 +178,8 @@
         android:layout_alignStart="@+id/textView9"
         android:layout_below="@+id/textView9"
         android:layout_marginTop="21dp"
-        android:text="Controles" />
+        android:text="Controles"
+        android:textColor="@color/black"/>
 
     <Spinner
         android:id="@+id/spinner2"
@@ -177,7 +197,8 @@
         android:layout_alignStart="@+id/textView10"
         android:layout_below="@+id/spinner2"
         android:layout_marginTop="26dp"
-        android:text="Precio" />
+        android:text="Precio"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView12"
