@@ -87,6 +87,10 @@ public class Login_Xbox extends AppCompatActivity implements View.OnClickListene
                 nuevo=new Intent(this,Registrar_Usuario.class);
                 startActivity(nuevo);
                 break;
+
+            case R.id.recuperar_password_txt:
+
+                break;
         }
     }
 

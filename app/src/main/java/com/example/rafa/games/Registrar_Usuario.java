@@ -2,14 +2,17 @@ package com.example.rafa.games;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.StaticLayout;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -32,8 +35,9 @@ import java.net.URL;
 
 public class Registrar_Usuario extends AppCompatActivity implements View.OnClickListener{
     EditText usuario,contraseña,contraseñar,correo,telefono;
-    Button registrarmebtn;
-    String usuariostr,contraseñastr,contraseñarstr,correostr,telefonostr;
+    Button registrarmebtn,abrirMapa;
+    String usuariostr,contraseñastr,contraseñarstr,correostr,telefonostr,latitudstr,longitudstr;
+    TextView latitude,longitud;
     Activity activity;
     ////IP de la URl del sitio que almacena los ficheros Php para conectarse con el JSON
     String IP = "http://pruebareten.esy.es/Oscar/";
@@ -41,6 +45,7 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
     String Insert = IP + "insertar_Registrar_Usuario.php";       //URL del script php para obtener los alumnos de la tabla Direcciones
     ObtenerWebService hiloConexionInsercion;
     private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +53,14 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
         usuario=(EditText)findViewById(R.id.usuario_registro);
         contraseña=(EditText)findViewById(R.id.contraseña_registro);
         contraseñar=(EditText)findViewById(R.id.contraseñar_registro);
+        abrirMapa=(Button)findViewById(R.id.abrirMapa_Registro);
         correo=(EditText)findViewById(R.id.correo_registro);
         telefono=(EditText)findViewById(R.id.telefono_registro);
         registrarmebtn=(Button)findViewById(R.id.registrarmebtn_registro);
+        latitude=(TextView)findViewById(R.id.latitud_registro);
+        longitud=(TextView)findViewById(R.id.longitud_registro);
         registrarmebtn.setOnClickListener(this);
+        abrirMapa.setOnClickListener(this);
         progressDialog=new ProgressDialog(this);
 
     }
@@ -60,12 +69,27 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
         boolean todos=true;
         if(usuario.getText().toString().equals("") || contraseña.getText().toString().equals("") ||
                 contraseñar.getText().toString().equals("") || correo.getText().toString().equals("") ||
-                telefono.getText().toString().equals(""))
+                telefono.getText().toString().equals("") || latitude.getText().toString().equals("----") ||
+                longitud.getText().toString().equals("----"))
         {
             todos=false;
         }
         return todos;
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if(resultCode == RESULT_OK) {
+                String latitudeRecibida = data.getStringExtra("latitude");
+                String longitudRecibida = data.getStringExtra("longitude");
+                latitude.setText(latitudeRecibida);
+                longitud.setText(longitudRecibida);
+            }
+        }
+    }
+
     public boolean verificarCcontraseñas() //Verifica que las contraseñas del edittext sean las mismas y retornar boolean
     {
         boolean correcta=false;
@@ -81,9 +105,9 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
         hiloConexionInsercion=new ObtenerWebService();
         progressDialog.setMessage("Registrando");
         progressDialog.show();
-       progressDialog.setCancelable(false);
+        progressDialog.setCancelable(false);
 
-        hiloConexionInsercion.execute(p[0],p[1],p[2],p[3],p[4]);
+        hiloConexionInsercion.execute(p[0],p[1],p[2],p[3],p[4],p[5],p[6]);
 
         /*
         p[0]=URL de lo que se va a hacer (insert, update o delete)
@@ -91,6 +115,8 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
         p[2]=Contraseña
         p[3]=Correo
         p[4]=Telefono
+        p[5]=latitude
+        p[6]=logitude
         */
 
     }
@@ -109,8 +135,10 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
                 contraseñastr=contraseñar.getText().toString();
                 correostr=correo.getText().toString();
                 telefonostr=telefono.getText().toString();
+                latitudstr=latitude.getText().toString();
+                longitudstr=longitud.getText().toString();
                 //
-                InsertarUsuarioBD(Insert,usuariostr,contraseñastr,correostr,telefonostr);
+                InsertarUsuarioBD(Insert,usuariostr,contraseñastr,correostr,telefonostr,latitudstr,longitudstr);
             }else
             {
                 Toast.makeText(this,"Las contraseñas no coinciden",Toast.LENGTH_LONG).show();
@@ -120,6 +148,11 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
             //Para que se vea mas estético, seria mejor un alert
             Toast.makeText(this,"Por favor, llene todos los campos e intentelo de nuevo",Toast.LENGTH_LONG).show();
         }
+    }
+    if(id==R.id.abrirMapa_Registro)
+    {
+        Intent nuevo =new Intent(this,MapsActivity.class);
+        startActivityForResult(nuevo,1);
     }
 
     }
@@ -226,6 +259,8 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
                         jsonparam.put("Password",params[2].toString());
                         jsonparam.put("Correo",params[3].toString());
                         jsonparam.put("Telefono",params[4].toString());
+                        jsonparam.put("Latitud",params[5].toString());
+                        jsonparam.put("Longitud",params[6].toString());
                         Log.println(Log.ASSERT,"Log","Entra en el put");
 
                     }
