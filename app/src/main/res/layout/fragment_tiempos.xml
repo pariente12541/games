@@ -18,9 +18,11 @@
         android:layout_marginBottom="33dp"
         android:layout_marginLeft="11dp"
         android:layout_marginStart="11dp"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
         android:text="Disponible"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        />
 
     <TextView
         android:id="@+id/xbox1tag"
@@ -41,7 +43,10 @@
         android:layout_marginLeft="2dp"
         android:text="Detalles"
         android:textSize="5sp"
-        android:id="@+id/detallesXbox1" />
+        android:id="@+id/detallesXbox1"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"
+        />
 
 
 <!--Xbox 2-->
@@ -54,7 +59,8 @@
         android:layout_alignStart="@+id/xbox1disponible"
         android:layout_below="@+id/xbox2tag"
         android:layout_marginTop="15dp"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -78,7 +84,9 @@
         android:layout_alignLeft="@id/detallesXbox1"
         android:text="Detalles"
         android:textSize="5sp"
-        android:id="@+id/detallesXbox2" />
+        android:id="@+id/detallesXbox2"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
 
@@ -91,7 +99,8 @@
         android:layout_alignLeft="@+id/xbox2disponible"
         android:layout_below="@+id/xbox2tag"
         android:layout_marginTop="120dp"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -115,7 +124,9 @@
         android:layout_below="@+id/xbox2disponible"
         android:text="Detalles"
         android:textSize="5sp"
-        android:id="@+id/detallesXbox3" />
+        android:id="@+id/detallesXbox3"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
     <!--Xbox 4-->
@@ -127,7 +138,8 @@
         android:layout_alignLeft="@+id/xbox1disponible"
         android:layout_below="@+id/xbox3tag"
         android:layout_marginTop="110dp"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -151,7 +163,9 @@
         android:layout_below="@id/detallesXbox3"
         android:text="Detalles"
         android:textSize="5sp"
-        android:id="@+id/detallesXbox4" />
+        android:id="@+id/detallesXbox4"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
 
@@ -164,7 +178,8 @@
         android:layout_alignLeft="@+id/xbox1disponible"
         android:layout_below="@+id/xbox3tag"
         android:layout_marginTop="230dp"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -188,7 +203,9 @@
         android:layout_below="@id/detallesXbox3"
         android:text="Detalles"
         android:textSize="5sp"
-        android:id="@+id/detallesXbox5" />
+        android:id="@+id/detallesXbox5"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
     <!--Xbox 6-->
     <TextView
@@ -201,7 +218,8 @@
         android:layout_alignStart="@+id/detallesXbox6"
         android:layout_marginLeft="12dp"
         android:layout_marginStart="12dp"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -227,7 +245,9 @@
         android:layout_marginLeft="95dp"
         android:text="Detalles"
         android:textSize="5sp"
-        android:id="@+id/detallesXbox6" />
+        android:id="@+id/detallesXbox6"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
     <!--Xbox 7-->
@@ -240,7 +260,8 @@
         android:layout_alignBottom="@+id/xbox4disponible"
         android:layout_alignLeft="@+id/xbox6disponible"
         android:layout_alignStart="@+id/xbox6disponible"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -265,7 +286,9 @@
         android:layout_alignLeft="@+id/detallesXbox6"
         android:layout_alignStart="@+id/detallesXbox6"
         android:text="Detalles"
-        android:textSize="5sp" />
+        android:textSize="5sp"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
     <!--Xbox 8-->
@@ -279,7 +302,8 @@
         android:layout_marginStart="39dp"
         android:layout_toEndOf="@+id/detallesXbox6"
         android:layout_toRightOf="@+id/detallesXbox6"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -307,7 +331,9 @@
         android:layout_toEndOf="@+id/detallesXbox6"
         android:layout_toRightOf="@+id/detallesXbox6"
         android:text="Detalles"
-        android:textSize="5sp" />
+        android:textSize="5sp"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
     <!--Xbox 9-->
@@ -320,7 +346,8 @@
         android:layout_alignStart="@+id/xbox8disponible"
         android:layout_below="@+id/xbox3tag"
         android:layout_marginTop="10dp"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -343,7 +370,9 @@
         android:layout_alignStart="@+id/detallesXbox8"
         android:layout_below="@+id/xbox3disponible"
         android:text="Detalles"
-        android:textSize="5sp" />
+        android:textSize="5sp"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
     <!--Xbox 10-->
@@ -356,7 +385,8 @@
         android:layout_alignBottom="@+id/xbox7disponible"
         android:layout_alignLeft="@+id/xbox9disponible"
         android:layout_alignStart="@+id/xbox9disponible"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -381,7 +411,9 @@
         android:layout_alignLeft="@+id/detallesXbox9"
         android:layout_alignStart="@+id/detallesXbox9"
         android:text="Detalles"
-        android:textSize="5sp" />
+        android:textSize="5sp"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
 
@@ -398,7 +430,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -424,7 +457,9 @@
         android:layout_marginLeft="282dp"
         android:text="Detalles"
         android:textSize="5sp"
-        android:id="@+id/detallesXbox11" />
+        android:id="@+id/detallesXbox11"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
 
@@ -438,7 +473,8 @@
         android:layout_alignBottom="@+id/xbox2disponible"
         android:layout_alignLeft="@+id/xbox11disponible"
         android:layout_alignStart="@+id/xbox11disponible"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -464,7 +500,9 @@
         android:layout_alignLeft="@+id/detallesXbox11"
         android:layout_alignStart="@+id/detallesXbox11"
         android:text="Detalles"
-        android:textSize="5sp" />
+        android:textSize="5sp"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
 
@@ -474,12 +512,12 @@
         android:id="@+id/xbox13disponible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/xbox9disponible"
-        android:layout_alignBottom="@+id/xbox9disponible"
-        android:layout_alignLeft="@+id/xbox12disponible"
-        android:layout_alignStart="@+id/xbox12disponible"
-        android:background="#FFF"
+        android:layout_alignLeft="@+id/xbox11tag"
+        android:layout_alignStart="@+id/xbox11tag"
+        android:layout_below="@+id/xbox13tag"
+        android:background="@color/verdePrincipal"
         android:text="Disponible"
+        android:textColor="@color/black"
         android:textSize="10sp" />
 
     <TextView
@@ -503,7 +541,9 @@
         android:layout_alignLeft="@+id/detallesXbox12"
         android:layout_alignStart="@+id/detallesXbox12"
         android:text="Detalles"
-        android:textSize="5sp" />
+        android:textSize="5sp"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
     <!--Xbox 14-->
@@ -516,7 +556,8 @@
         android:layout_alignBottom="@+id/xbox10disponible"
         android:layout_alignLeft="@+id/xbox13disponible"
         android:layout_alignStart="@+id/xbox13disponible"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
+        android:textColor="@color/black"
         android:text="Disponible"
         android:textSize="10sp" />
 
@@ -541,7 +582,9 @@
         android:layout_alignLeft="@+id/detallesXbox13"
         android:layout_alignStart="@+id/detallesXbox13"
         android:text="Detalles"
-        android:textSize="5sp" />
+        android:textSize="5sp"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 
 
@@ -551,20 +594,19 @@
         android:id="@+id/xbox15disponible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/xbox5disponible"
-        android:layout_alignBottom="@+id/xbox5disponible"
+        android:layout_above="@+id/detallesXbox15"
         android:layout_alignLeft="@+id/xbox14disponible"
         android:layout_alignStart="@+id/xbox14disponible"
-        android:background="#FFF"
+        android:background="@color/verdePrincipal"
         android:text="Disponible"
+        android:textColor="@color/black"
         android:textSize="10sp" />
 
     <TextView
         android:id="@+id/xbox15tag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/xbox5tag"
-        android:layout_alignBottom="@+id/xbox5tag"
+        android:layout_above="@+id/xbox15disponible"
         android:layout_alignLeft="@+id/xbox14tag"
         android:layout_alignStart="@+id/xbox14tag"
         android:background="#FFF"
@@ -580,6 +622,8 @@
         android:layout_alignLeft="@+id/detallesXbox14"
         android:layout_alignStart="@+id/detallesXbox14"
         android:text="Detalles"
-        android:textSize="5sp" />
+        android:textSize="5sp"
+        android:background="@drawable/botonredondo"
+        android:backgroundTint="@color/naranjaPrincipal"/>
 
 </RelativeLayout>
