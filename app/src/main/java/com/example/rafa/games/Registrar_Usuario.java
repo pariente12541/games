@@ -1,9 +1,15 @@
 package com.example.rafa.games;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.GpsStatus;
 import android.os.AsyncTask;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.StaticLayout;
@@ -45,6 +51,7 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
     String Insert = IP + "insertar_Registrar_Usuario.php";       //URL del script php para obtener los alumnos de la tabla Direcciones
     ObtenerWebService hiloConexionInsercion;
     private ProgressDialog progressDialog;
+    private final static int PERMISO_MAPA=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,10 +158,30 @@ public class Registrar_Usuario extends AppCompatActivity implements View.OnClick
     }
     if(id==R.id.abrirMapa_Registro)
     {
-        Intent nuevo =new Intent(this,MapsActivity.class);
-        startActivityForResult(nuevo,1);
+        //Intent nuevo =new Intent(this,MapsActivity.class);
+        if (ContextCompat.checkSelfPermission(getApplicationContext(),Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},PERMISO_MAPA);
+        }else{
+            Intent intent=new Intent(this,MapsActivity.class);
+            startActivityForResult(intent,1);
+        }
+        //startActivityForResult(nuevo,1);
     }
 
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        //super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode){
+            case PERMISO_MAPA: if (grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                Intent gps=new Intent("android.location.GPS_ENABLED_CHANGE");
+                gps.putExtra("enabled",true);
+               Intent nuevo =new Intent(this,MapsActivity.class);
+                sendBroadcast(gps);
+                startActivityForResult(nuevo,1);break;
+            }
+        }
     }
 
     public class ObtenerWebService extends AsyncTask<String,Void,String>

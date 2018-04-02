@@ -4,5 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorSend">#04B404</color>
+    <color name="verdePrincipal">#037803</color>
+    <color name="black">#000</color>
+    <color name="naranjaPrincipal">#FFFCBD02</color>
+    <color name="verdeClaro">#48ff48</color>
+    <color name="verdeObscuro"> #FF025402</color>
 
 </resources>

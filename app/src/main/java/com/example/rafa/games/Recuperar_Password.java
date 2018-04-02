@@ -1,6 +1,7 @@
 package com.example.rafa.games;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -96,7 +97,8 @@ public class Recuperar_Password extends AppCompatActivity implements View.OnClic
     }
     if(id==R.id.enviarCodigo_btn)
     {
-
+        Intent intent=new Intent(this,Registrar_Nueva_Password.class);
+        startActivity(intent);
     }
 
     }
@@ -148,14 +150,20 @@ public class Recuperar_Password extends AppCompatActivity implements View.OnClic
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
-            if(s.equals("1"))
+            Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+            if(s.equals("4"))
             {
-                Toast.makeText(getApplicationContext(),"Se ha registrado con exito",Toast.LENGTH_LONG).show();
-            }else if(s.equals("2"))
+                Toast.makeText(getApplicationContext(),"Se ha enviado correctamente el codigo, dispone de 30 minutos para " +
+                        "ingresarlo",Toast.LENGTH_LONG).show();
+            }else if(s.equals("3"))
             {
-                Toast.makeText(getApplicationContext(),"El usuario ya existe, " +
-                        "por favor intente con otro nombre de usuario",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Ingrese un correo electronico",Toast.LENGTH_LONG).show();
+            }
+            else if (s.equals("2")){
+                Toast.makeText(getApplicationContext(),"No existe una cuenta vinculada a el correo que proporciono",Toast.LENGTH_LONG).show();
+            }
+            else {
+                Toast.makeText(getApplicationContext(),"Ocurrio un error, intentelo de nuevo",Toast.LENGTH_LONG).show();
             }
             progressDialog.dismiss();
         }
@@ -197,7 +205,6 @@ public class Recuperar_Password extends AppCompatActivity implements View.OnClic
                     Urlconn.setRequestProperty("Content-Type","application/json");
                     Urlconn.setRequestProperty("Accept","application/json");
                     Urlconn.connect();
-
                     JSONObject jsonparam=new JSONObject();
 
                     if(params[0].equals(Insert))
@@ -217,6 +224,7 @@ public class Recuperar_Password extends AppCompatActivity implements View.OnClic
                     StringBuilder result=new StringBuilder();
                     if(respuesta==HttpURLConnection.HTTP_OK)
                     {
+
                         String line;
                         BufferedReader br=new BufferedReader(new InputStreamReader(Urlconn.getInputStream()));
                         while((line=br.readLine())!=null)
@@ -227,16 +235,24 @@ public class Recuperar_Password extends AppCompatActivity implements View.OnClic
                         String resultJSON=respuestaJSON.getString("estado");
                         String claveJSON=respuestaJSON.getString("mensaje");
                         Log.println(Log.ASSERT,"Log 2",resultJSON);
-                        if(resultJSON.equals("1"))
+                        if(resultJSON.equals("3"))
                         {
-                            devuelve=1; //Direccion insertada correctamente
-                        }else if(resultJSON.equals("2"))
+                            devuelve=3; //Clave enviada correctamente
+                        }else if(resultJSON.equals("4"))
                         {
-                            devuelve=2; //Usuario duplicado, no se han insertado registros
+                            devuelve=4; //
+                        }
+                        else if(resultJSON.equals("2"))//No hay cuenta con ese correo
+                        {
+                            devuelve=2;
+                    }
+                    else if (resultJSON.equals("6"))//Error en el SMTP
+                    {
+                            devuelve=6;
                         }
                     }else
                     {
-                        devuelve=3; //No hay conexion a internet
+                        devuelve=5; //Error en el servidor
                     }
 
 

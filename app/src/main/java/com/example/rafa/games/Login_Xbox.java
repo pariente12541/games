@@ -39,7 +39,7 @@ public class Login_Xbox extends AppCompatActivity implements View.OnClickListene
     String Select = IP + "select_For_Login.php";       //URL del script php para obtener los alumnos de la tabla Direcciones
     ObtenerWebService hiloConexionSeleccion;
     private ProgressDialog progressDialog;
-    Intent nuevo;
+    Intent nuevo,recuperar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +89,8 @@ public class Login_Xbox extends AppCompatActivity implements View.OnClickListene
                 break;
 
             case R.id.recuperar_password_txt:
-
+                recuperar=new Intent(this,Recuperar_Password.class);
+                startActivity(recuperar);
                 break;
         }
     }
